@@ -1,0 +1,23 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Parameter store",
+  "Parameters": {
+    "env": {
+      "Type": "String"
+    }
+  },
+  "Resources": {
+    "AmplifyParameter": {
+      "Type": "AWS::SSM::Parameter",
+      "Properties": {
+        "Value": "my-value",
+        "Type": "String"
+      }
+    }
+  },
+  "Outputs": {
+    "AmplifyParameter": {
+      "Value": { "Fn::GetAtt": ["AmplifyParameter", "Value"] }
+    }
+  }
+}

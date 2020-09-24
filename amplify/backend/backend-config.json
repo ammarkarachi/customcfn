@@ -1,0 +1,21 @@
+{
+  "category1": {
+    "resource1": {
+      "providerPlugin": "awscloudformation",
+      "service": "ssm",
+      "dependsOn": []
+    }
+  },
+  "function": {
+    "customcfea0df03a": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": [{
+        "category": "category1",
+        "resourceName": "resource1",
+        "attributes": [ "AmplifyParameter"]
+      }]
+    }
+  }
+}

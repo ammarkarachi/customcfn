@@ -1,0 +1,9 @@
+{
+    "category1resource1AmplifyParameter": {
+        "Type": "String",
+        "Fn::GetAtt": [
+              "category1resource1",  
+              "Outputs.AmplifyParameter"
+           ]
+        }
+}
